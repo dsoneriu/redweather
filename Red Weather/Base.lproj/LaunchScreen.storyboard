@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mars_NASA4X3" translatesAutoresizingMaskIntoConstraints="NO" id="R5g-zl-0wo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-z3-9C8" userLabel="separator">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Red Planet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtp-HX-Jsb">
+                                <rect key="frame" x="197" y="150" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R5g-zl-0wo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4ZP-fA-SLJ"/>
+                            <constraint firstItem="vtp-HX-Jsb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="J9A-wZ-Znx"/>
+                            <constraint firstItem="bIx-z3-9C8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="MGA-es-7B1"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="R5g-zl-0wo" secondAttribute="bottom" id="Ntc-Cf-o8N"/>
+                            <constraint firstItem="bIx-z3-9C8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="QO7-M0-rm7"/>
+                            <constraint firstAttribute="trailing" secondItem="R5g-zl-0wo" secondAttribute="trailing" id="QeF-mj-mD6"/>
+                            <constraint firstItem="R5g-zl-0wo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="VA3-Ct-M8s"/>
+                            <constraint firstItem="bIx-z3-9C8" firstAttribute="height" secondItem="R5g-zl-0wo" secondAttribute="height" multiplier="0.25" id="WJn-4N-Rf0"/>
+                            <constraint firstAttribute="trailing" secondItem="bIx-z3-9C8" secondAttribute="trailing" id="fqd-rm-1eM"/>
+                            <constraint firstItem="vtp-HX-Jsb" firstAttribute="top" secondItem="bIx-z3-9C8" secondAttribute="bottom" id="kv5-lX-p4p"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +52,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Mars_NASA4X3" width="4392" height="3291"/>
+    </resources>
 </document>
